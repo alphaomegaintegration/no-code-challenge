@@ -1,0 +1,101 @@
+{
+  "schema_version": 1,
+  "diagram_type": "architecture",
+  "meta": {
+    "title": "no-code-challenge",
+    "output": "architecture.html",
+    "quality_profile": "showcase"
+  },
+  "layout": {
+    "mode": "grid",
+    "origin": [
+      40,
+      60
+    ],
+    "cols": 3,
+    "gapX": 110,
+    "gapY": 110
+  },
+  "components": [
+    {
+      "id": "readme",
+      "type": "frontend",
+      "label": "README",
+      "sublabel": "thesis statement",
+      "row": 0,
+      "col": 1
+    },
+    {
+      "id": "summary",
+      "type": "database",
+      "label": "Executive summary",
+      "sublabel": "Executive_Summary.docx",
+      "row": 1,
+      "col": 0,
+      "size": [
+        190,
+        60
+      ]
+    },
+    {
+      "id": "alternatives",
+      "type": "database",
+      "label": "Alternatives",
+      "sublabel": "Alternatives_Framework.docx",
+      "row": 1,
+      "col": 1,
+      "size": [
+        190,
+        60
+      ]
+    },
+    {
+      "id": "financial",
+      "type": "database",
+      "label": "Financial analysis",
+      "sublabel": "Financial_Analysis.docx",
+      "row": 1,
+      "col": 2,
+      "size": [
+        190,
+        60
+      ]
+    }
+  ],
+  "connections": [
+    {
+      "id": "readme-summary",
+      "from": "readme",
+      "to": "summary",
+      "label": "brief",
+      "fromSide": "left",
+      "toSide": "top"
+    },
+    {
+      "id": "readme-alternatives",
+      "from": "readme",
+      "to": "alternatives",
+      "label": "options",
+      "fromSide": "bottom",
+      "toSide": "top",
+      "labelDy": 24
+    },
+    {
+      "id": "readme-financial",
+      "from": "readme",
+      "to": "financial",
+      "label": "costs",
+      "fromSide": "right",
+      "toSide": "top"
+    }
+  ],
+  "cards": [
+    {
+      "dot": "cyan",
+      "title": "Contents",
+      "items": [
+        "A README plus three Word documents; no code"
+      ]
+    }
+  ]
+}
